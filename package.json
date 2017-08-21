@@ -1,0 +1,28 @@
+{
+  "name": "wp-widget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edward-ganuelas/wordpress-widget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edward-ganuelas/wordpress-widget/issues"
+  },
+  "homepage": "https://github.com/edward-ganuelas/wordpress-widget#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "vue": "^2.4.2",
+    "webpack": "^3.5.5"
+  }
+}
