@@ -1,8 +1,8 @@
 import "babel-polyfill";
 import Vue from 'vue';
+import urls from './urls.js';
 
 (function(){
-let urls = require('./urls');
 let app = new Vue({
     el: "#app",
     data: {
