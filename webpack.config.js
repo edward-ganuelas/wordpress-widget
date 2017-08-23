@@ -11,6 +11,9 @@ module.exports ={
             vue: 'vue/dist/vue.js'
         }
     },
+    devServer:{
+        contentBase: './dist'
+    },
     module: {
         rules: [
             { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
