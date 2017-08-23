@@ -1,6 +1,10 @@
 # WORDPRESS WIDGET 
 Load the latest post excerpt from a wordpress.com webpage.
 
-npm init
+npm install
 
-npm run build
+
+Open /src/urls.js and update wordpressSiteUrl.
+
+
+npm start
