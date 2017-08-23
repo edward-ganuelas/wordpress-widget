@@ -10,7 +10,7 @@
     <div id="app">
         <h2 v-html="json.title"></h2>
         <div v-html="json.excerpt"></div>
-        <p><a :href="json.URL">Read More</a></p>
+        <p><a :href="json.URL" v-if="json.URL">Read More</a></p>
     </div>
     <script src="bundle.js"></script>
 </body>
