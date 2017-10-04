@@ -1,6 +1,7 @@
 import "babel-polyfill";
 import Vue from 'vue';
 import urls from './urls.js';
+import axios from 'axios';
 
 (function(){
 let app = new Vue({
@@ -10,22 +11,15 @@ let app = new Vue({
     },
     methods: {
         getWordPressPosts : function(url){
-            return new Promise((resolve, reject)=>{
-                const xhr = new XMLHttpRequest();
-                xhr.open('GET', url);
-                xhr.onload = ()=> resolve(xhr.responseText);
-                xhr.onerror = () => reject(xhr.statusText);
-                xhr.send();
-            });
+            return axios.get(url);
         },
         onload: function(url){
             let wordPressPromise = this.getWordPressPosts(url);
             wordPressPromise.then((success)=>{
                 // console.log(success)
-                this.json = JSON.parse(success).posts[0];
-            },
-            (fail)=>{
-                console.log(fail);
+                this.json = success.data.posts[0];
+            }).catch((error)=>{
+                console.log(error);
             });
         }
     }
